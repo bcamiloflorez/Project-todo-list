@@ -2,20 +2,6 @@ import { PrismaClient } from "@prisma/client";
 
 const clientePrisma = new PrismaClient();
 
-const tareas = [
-  {
-    id: 1,
-    title: "Tarea 1",
-    description: "Descripción de la tarea 1",
-    estado: false,
-  },
-  {
-    id: 2,
-    title: "Tarea 2",
-    description: "Descripción de la tarea 2",
-    estado: true,
-  },
-];
 //funcion que se llama desde el controla para obtener las tareas de la bd
 const obtenerTareas = async () => {
   //llamado a la bd
