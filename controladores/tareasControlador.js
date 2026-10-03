@@ -7,8 +7,10 @@ const obtenerTareas = async (req, res) => {
 };
 
 const crearTarea = async (req, res) => {
-    const datos = await tareasServicios.crearTarea(req.body);
-    res.status(201).json("Tareas Creadas: " + datos.count);
+    const idUsuario = req.datos.id;
+    req.body.usuarioId = idUsuario
+    const datos = await tareasServicios.crearTarea(req.body,idUsuario);
+    res.status(201).send({respuesta: "Tarea Creada", datos: datos});
 };
 
 const actualizarTarea = async (req, res) => {

@@ -15,7 +15,7 @@ const obtenerUsuarios = async () => {
 };
 
 const crearUsuario = async (body) => {
-    const respuesta = await clientePrisma.usuario.createMany({
+    const respuesta = await clientePrisma.usuario.create({
         data: {
             nombre: body.nombre,
             correo: body.correo,

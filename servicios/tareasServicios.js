@@ -10,7 +10,7 @@ const obtenerTareas = async () => {
 };
 
 const crearTarea = async (body) => {
-  const respuesta = await clientePrisma.tarea.createMany({
+  const respuesta = await clientePrisma.tarea.create({
     data: {
       nombre: body.nombre,
       descripcion: body.descripcion,
