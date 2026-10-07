@@ -8,7 +8,7 @@ const app = express();
 //middleware para serializar el body de las solicitudes
 
 app.use(cors({
-  origin: "*", // ["192.168.2.45","205,12,98,1", "https://mydomain.com"]
+  origin: "*", // ["192.168.2.45","205.12.98.1", "https://mydomain.com"]
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"]
